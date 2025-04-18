@@ -19,7 +19,7 @@ public class LotteryServlet extends HttpServlet{
 			int num = rd.nextInt(39)+1;
 			nums.add(num);
 		}
-		resp.getWriter().print(nums);
+		//resp.getWriter().print(nums);
 		//生成調度器
 		RequestDispatcher rdr = req.getRequestDispatcher("/lottery.jsp");
 		//傳遞樂透號碼，裝配要傳遞的內容
