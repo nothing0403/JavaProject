@@ -12,7 +12,7 @@
 	            <legend>Coffee Order</legend>
 	            咖啡: ${ coffeeOrder.type }<br/> 
 	            容量: ${ coffeeOrder.size }<br/> 
-	            含糖: ${ coffeeOrder.sugar }<br/> 
+	            含糖: ${ coffeeOrder.ice }<br/> 
 	            ${ coffeeOrder.info }<br/>          
 	        </fieldset>
 	    </div>

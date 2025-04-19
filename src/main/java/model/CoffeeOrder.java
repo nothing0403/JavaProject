@@ -6,28 +6,27 @@ public class CoffeeOrder {
 
 	private String type;
 	private String size;
-	private boolean sugar;
+	private String ice;
 	private int price;
 	
 	private static final Map<String, Map<String, Integer>> priceTable = Map.of(
-			"latte", Map.of("S", 50,"M", 70,"L", 90),
-            "mocha", Map.of("S", 45,"M", 55,"L", 65),
-            "americano", Map.of("S", 40,"M", 45,"L", 60),
-            "cappuccino", Map.of("S", 55,"M", 80,"L", 100));
+			"greentea", Map.of("S", 30,"M", 50,"L", 50),
+            "blacktea", Map.of("S", 45,"M", 55,"L", 65),
+            "milktea", Map.of("S", 40,"M", 45,"L", 60));
 	
 	private static final Map<String, String> sizeTable = Map.of("S","小","M","中","L","大");
-	private static final Map<Boolean, String> sugarTable = Map.of(true,"有糖",false,"無糖");
+	private static final Map<String, String> sugarTable = Map.of("yes","有糖","no","無糖");
 	
-	public CoffeeOrder(String type, String size, String sugar) {
+	public CoffeeOrder(String type, String size, String ice) {
 		this.type = type;
 		this.size = size;
-		this.sugar = Boolean.parseBoolean(sugar);
+		this.ice = ice;
 		this.price = priceTable.get(type.toLowerCase()).get(size);
 	}
 
 	public String getInfo() {
 		String sizeText = sizeTable.get(size);
-		String sugarText = sugarTable.get(sugar);
+		String sugarText = sugarTable.get(ice);
 		return String.format("您點了一杯%s杯%s咖啡(%s)價格:%d元",sizeText,type,sugarText,price);
 	}
 
@@ -39,8 +38,8 @@ public class CoffeeOrder {
 		return size;
 	}
 
-	public boolean isSugar() {
-		return sugar;
+	public String getIce() {
+		return ice;
 	}
 
 	public int getPrice() {
