@@ -21,14 +21,14 @@ public class CoffeeServlet extends HttpServlet{
 		
 		String type = req.getParameter("type");
 		String size = req.getParameter("size");
-		String ice = req.getParameter("ice");
+		String sugar = req.getParameter("sugar");
 		
-		if(type == null | size == null | ice == null) {
+		if(type == null | size == null | sugar == null) {
 			resp.getWriter().print("飲料資訊輸入錯誤");
 			return;
 		}
 		
-		CoffeeOrder coffeeOrder = new CoffeeOrder(type, size, ice);
+		CoffeeOrder coffeeOrder = new CoffeeOrder(type, size, sugar);
 		
 		RequestDispatcher rd = req.getRequestDispatcher("coffee_order.jsp");
 		//RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/coffee_order.jsp");
