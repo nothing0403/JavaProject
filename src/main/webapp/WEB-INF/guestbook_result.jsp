@@ -8,9 +8,8 @@
 	</head>
 	<body>
 	    <div>
-	        ${ guestbooks.username }
-	        ${ guestbooks.message }
-	        ${ guestbooks.date }
+	        ${ username }
+	        ${ guestbooks }
 	        <a href="/JavaWeb2/guestbook" class="pure-button pure-button-primary">返回</a>
 	    </div>
 	</body>
