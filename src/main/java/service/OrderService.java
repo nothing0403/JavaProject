@@ -29,6 +29,7 @@ public class OrderService {
 	public List<OrderDTO> getOrderHistory(){
 		List<Order> orders = orderDAO.findAll(); // 取得所有資料
 		
+		//儲存物件用的list
 		List<OrderDTO> orderDTOs = new ArrayList<>();
 		
 		for(Order order : orders) {
@@ -64,10 +65,11 @@ public class OrderService {
 	public OrderDTO updateOrder(int index, String newItem) {
 		Order order = orderDAO.getOrder(index);
 		order.setItem(newItem);
+		order.setPrice(menu.get(newItem));
 		orderDAO.update(index, order);
 		
 		OrderDTO orderDTO = new OrderDTO();
-		orderDTO.setMessage("index=" + index + ". 資料刪除成功");
+		orderDTO.setMessage("index=" + index + ". 資料上傳成功");
 		return orderDTO;
 	}
 	

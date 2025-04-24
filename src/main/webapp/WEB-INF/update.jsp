@@ -17,7 +17,7 @@
             <fieldset>
                 <legend>修改訂單</legend>
                 Index:
-                <input type="number" name="index" value="${ index }" readonly><p />
+                <input type="number" name="index" value="${ index }" required><p />
                 品名:
                 <select name="item">
                     <option value="牛肉麵">牛肉麵</option>

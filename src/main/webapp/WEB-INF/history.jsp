@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="/JavaWebOrder/css/buttons.css">
 	</head>
 	<body style="padding:20px">
-        <div class="pure-form">
+        <div class="pure-form">       
             <fieldset>
                 <legend>訂單歷史資料</legend>
                 <table class="pure-table pure-table-bordered">
@@ -41,7 +41,7 @@
                     </tfoot>
                 </table>
                 <p />
-                <a href="/JavaWebOrder/index.jsp" class="pure-button pure-button-primary">回首頁</a>
+                <a href="/JavaWebOrder/begin" class="pure-button pure-button-primary">回首頁</a>
             </fieldset>
         </div>
     </body>
