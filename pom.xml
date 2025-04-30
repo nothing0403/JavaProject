@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>JavaWebTodoList</groupId>
-  <artifactId>JavaWebTodoList</artifactId>
+  <groupId>JavaWebCart</groupId>
+  <artifactId>JavaWebCart</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
   <dependencies>
+  
 	  <!-- JSTL 依賴-->
 	  <dependency>
 	    <groupId>jakarta.servlet.jsp.jstl</groupId>
@@ -19,6 +19,13 @@
 	    <version>3.0.0</version>
 	  </dependency>  
 	  
+	  <!-- JavaMail API -->
+	  <dependency>
+	  	<groupId>com.sun.mail</groupId>
+		<artifactId>javax.mail</artifactId>
+		<version>1.6.2</version>
+	  </dependency>
+	  
 	  <dependency>
 	    <groupId>org.projectlombok</groupId>
 	    <artifactId>lombok</artifactId>
@@ -31,10 +38,8 @@
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>8.0.33</version>
 	  </dependency>
-
 			  
   </dependencies>
-  
   <build>
     <plugins>
       <plugin>
